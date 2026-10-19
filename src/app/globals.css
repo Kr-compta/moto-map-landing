@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+/* Palette taken from the app's own theme (com.motomap.ui.theme). */
+:root {
+  --bg: #0b0e14;
+  --surface: #141922;
+  --surface-2: #1d2430;
+  --line: #2c3543;
+  --text: #f2f5fa;
+  --muted: #97a3b6;
+  --accent: #ff6b2d;
+  --accent-deep: #7a3316;
+  --go: #30c48d;
+  --amber: #ffb020;
+  --sky: #3da9fc;
+  --stop: #e5484d;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-deep: var(--accent-deep);
+  --color-go: var(--go);
+  --color-amber: var(--amber);
+  --color-sky: var(--sky);
+  --color-stop: var(--stop);
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Figures never change width, as in the app. */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.glow {
+  background:
+    radial-gradient(60% 50% at 70% 20%, rgb(255 107 45 / 0.18), transparent 70%),
+    radial-gradient(40% 40% at 10% 80%, rgb(61 169 252 / 0.08), transparent 70%);
+}
+
+@keyframes rec-blink {
+  50% {
+    opacity: 0.25;
+  }
+}
+
+.rec-dot {
+  animation: rec-blink 1.2s steps(1) infinite;
+}
+
+@keyframes float {
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: var(--len);
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.draw {
+  stroke-dasharray: var(--len);
+  animation: draw 2.4s ease-out both;
+}
+
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details[open] .faq-icon {
+  transform: rotate(45deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .rec-dot,
+  .float,
+  .draw {
+    animation: none;
+  }
+}
