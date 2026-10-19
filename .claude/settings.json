@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
+  "permissions": {
+    "allow": [
+      "Read(./**)",
+      "Edit(./**)",
+      "Write(./**)",
+      "Bash(rm:*)",
+      "Bash(mv:*)",
+      "Bash(mkdir:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Read(//Users/macbook/motomap/**)"
+    ],
+    "deny": [
+      "Edit(//Users/macbook/motomap/**)",
+      "Write(//Users/macbook/motomap/**)"
+    ],
+    "additionalDirectories": [
+      "/Users/macbook/motomap"
+    ]
+  }
+}
