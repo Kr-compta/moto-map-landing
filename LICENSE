@@ -1,0 +1,63 @@
+MotoMap Website — Proprietary License
+
+Copyright (c) 2026 Amour Ramanantsiresy. All rights reserved.
+
+1. Ownership
+
+   The MotoMap website, including its source code, page copy and
+   translations, design, illustrations, screen mock-ups, icons and the
+   MotoMap name and logo (together, "the Website"), is the exclusive property
+   of the copyright holder. The Website promotes MotoMap, a commercial
+   application.
+
+2. No licence granted
+
+   The Website is NOT open source. Publishing its source code in a public
+   repository does not grant any licence to use it. The only permission given
+   is to view the source code, and to fork it within GitHub, to the extent
+   required by GitHub's Terms of Service.
+
+3. Restrictions
+
+   Without the prior written permission of the copyright holder, you may not:
+
+   a. copy, reproduce, modify, translate or create derivative works of the
+      Website, in whole or in part;
+   b. host, deploy, distribute, publish, sublicense, sell or otherwise make
+      the Website or any copy of it available to anyone;
+   c. use any part of the Website, including its code, copy, design, mock-ups
+      or the MotoMap name and logo, in another product, website or service,
+      whether commercial or not;
+   d. remove or alter any copyright, licence or attribution notice.
+
+4. Third-party components
+
+   The Website is built with open-source libraries (including Next.js, React
+   and Tailwind CSS) and may show map imagery derived from OpenStreetMap
+   (© OpenStreetMap contributors, ODbL), OpenTopoMap (CC-BY-SA) and
+   HikeBikeMap. These remain under their own licences. This licence covers
+   only the copyright holder's own work and does not restrict any right those
+   licences give you over those components.
+
+5. Termination
+
+   Any use of the Website that breaks these terms ends any permission you may
+   have had, immediately and without notice. You must then stop using the
+   Website and destroy every copy in your possession.
+
+6. No warranty
+
+   THE WEBSITE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.
+
+7. Limitation of liability
+
+   IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR
+   OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+   ARISING FROM, OUT OF OR IN CONNECTION WITH THE WEBSITE OR ITS USE.
+
+8. Contact
+
+   Requests for permission, licensing or commercial use:
+   https://github.com/Kr-compta
