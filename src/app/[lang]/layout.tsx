@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 import { JetBrains_Mono, Plus_Jakarta_Sans } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { hasLocale, localeTags, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import { site, siteUrl } from "@/lib/site";
@@ -72,7 +73,10 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
 
   return (
     <html lang={localeTags[lang].html} className={`${jakarta.variable} ${jetbrains.variable}`}>
-      <body className="min-h-dvh bg-bg text-text antialiased">{children}</body>
+      <body className="min-h-dvh bg-bg text-text antialiased">
+        {children}
+        <SpeedInsights />
+      </body>
     </html>
   );
 }

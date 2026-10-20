@@ -109,6 +109,13 @@ Any host that runs Next.js 16 works (Vercel, or `npm run build && npm start` on 
 Set `SITE_URL` to the production origin before building, otherwise canonical and sitemap URLs point
 at localhost.
 
+### Vercel Speed Insights
+
+The root layout renders `<SpeedInsights />` from `@vercel/speed-insights`, which reports real-user
+Core Web Vitals (LCP, INP, CLS, …) to Vercel. To see the data, enable **Speed Insights** in the
+project's dashboard on Vercel; results appear after the next deployment. In development it runs in
+debug mode and sends nothing. On other hosts the script loads but has nowhere to report.
+
 ## Content rules
 
 The copy describes the Android app, whose source is in a separate repository. Its README is the
