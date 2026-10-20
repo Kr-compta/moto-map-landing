@@ -109,12 +109,18 @@ Any host that runs Next.js 16 works (Vercel, or `npm run build && npm start` on 
 Set `SITE_URL` to the production origin before building, otherwise canonical and sitemap URLs point
 at localhost.
 
-### Vercel Speed Insights
+### Vercel Web Analytics and Speed Insights
 
-The root layout renders `<SpeedInsights />` from `@vercel/speed-insights`, which reports real-user
-Core Web Vitals (LCP, INP, CLS, …) to Vercel. To see the data, enable **Speed Insights** in the
-project's dashboard on Vercel; results appear after the next deployment. In development it runs in
-debug mode and sends nothing. On other hosts the script loads but has nowhere to report.
+The root layout renders two Vercel components:
+
+- `<Analytics />` (`@vercel/analytics`): page views, visitors, referrers, countries and devices.
+  It uses no cookies, so no consent banner is needed for it.
+- `<SpeedInsights />` (`@vercel/speed-insights`): real-user Core Web Vitals (LCP, INP, CLS, …).
+
+To see the data, enable **Web Analytics** and **Speed Insights** in the project's dashboard on
+Vercel; results appear after the next deployment. In development both run in debug mode and send
+nothing (events are logged to the browser console). On other hosts the scripts load but have
+nowhere to report.
 
 ## Content rules
 
