@@ -24,30 +24,30 @@ export default async function OpenGraphImage({ params }: { params: Promise<{ lan
           flexDirection: "column",
           justifyContent: "space-between",
           padding: 72,
-          background: "radial-gradient(circle at 85% 15%, rgba(255,107,45,0.35), #0B0E14 55%)",
-          color: "#F2F5FA",
+          background: "radial-gradient(circle at 85% 15%, rgba(245,110,10,0.35), #171411 55%)",
+          color: "#ECEAE9",
           fontFamily: "sans-serif",
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
           <svg width="84" height="84" viewBox="0 0 108 108">
-            <rect width="108" height="108" rx="24" fill="#141922" />
-            <path d="M30,68 A24,24 0 1,1 78,68" stroke="#FF6B2D" strokeWidth="6" strokeLinecap="round" fill="none" />
-            <path d="M54,68 L68,48" stroke="#F2F5FA" strokeWidth="5" strokeLinecap="round" />
-            <circle cx="54" cy="64" r="4" fill="#F2F5FA" />
+            <rect width="108" height="108" rx="24" fill="#201b18" />
+            <path d="M30,68 A24,24 0 1,1 78,68" stroke="#F56E0A" strokeWidth="6" strokeLinecap="round" fill="none" />
+            <path d="M54,68 L68,48" stroke="#ECEAE9" strokeWidth="5" strokeLinecap="round" />
+            <circle cx="54" cy="64" r="4" fill="#ECEAE9" />
           </svg>
           <div style={{ fontSize: 44, fontWeight: 700 }}>MotoMap</div>
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
           <div style={{ display: "flex", flexWrap: "wrap", fontSize: 84, fontWeight: 800, lineHeight: 1.05, letterSpacing: -2 }}>
             <span>{t.hero.titleStart}&nbsp;</span>
-            <span style={{ color: "#FF6B2D" }}>{t.hero.titleHighlight}</span>
+            <span style={{ color: "#F56E0A" }}>{t.hero.titleHighlight}</span>
           </div>
-          <div style={{ fontSize: 30, color: "#97A3B6" }}>{t.hero.eyebrow}</div>
+          <div style={{ fontSize: 30, color: "#C0B9B4" }}>{t.hero.eyebrow}</div>
         </div>
         <div style={{ display: "flex", gap: 16, fontSize: 24 }}>
           {t.hero.trust.map((item) => (
-            <div key={item} style={{ display: "flex", padding: "10px 22px", borderRadius: 999, border: "2px solid #2C3543", background: "#141922" }}>
+            <div key={item} style={{ display: "flex", padding: "10px 22px", borderRadius: 999, border: "2px solid #4B443F", background: "#201b18" }}>
               {item}
             </div>
           ))}

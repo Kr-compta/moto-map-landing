@@ -23,10 +23,10 @@ function Icon({ children, ...props }: IconProps) {
 export function Logo(props: IconProps) {
   return (
     <svg viewBox="0 0 108 108" aria-hidden {...props}>
-      <rect width="108" height="108" rx="26" fill="#0B0E14" />
-      <path d="M30,68 A24,24 0 1,1 78,68" stroke="#FF6B2D" strokeWidth="6" strokeLinecap="round" fill="none" />
-      <path d="M54,68 L68,48" stroke="#F2F5FA" strokeWidth="5" strokeLinecap="round" />
-      <circle cx="54" cy="64" r="4" fill="#F2F5FA" />
+      <rect width="108" height="108" rx="26" fill="#171411" />
+      <path d="M30,68 A24,24 0 1,1 78,68" stroke="#F56E0A" strokeWidth="6" strokeLinecap="round" fill="none" />
+      <path d="M54,68 L68,48" stroke="#ECEAE9" strokeWidth="5" strokeLinecap="round" />
+      <circle cx="54" cy="64" r="4" fill="#ECEAE9" />
     </svg>
   );
 }

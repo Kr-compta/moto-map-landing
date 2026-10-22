@@ -11,5 +11,5 @@ export function arc(cx: number, cy: number, r: number, from: number, to: number)
   return `M${a.x.toFixed(2)},${a.y.toFixed(2)} A${r},${r} 0 ${large} 1 ${b.x.toFixed(2)},${b.y.toFixed(2)}`;
 }
 
-/** Same ramp as the app's speed-coloured routes: slow green, through amber, to fast orange-red. */
-export const speedColors = ["#30C48D", "#9BD25A", "#FFB020", "#FF6B2D", "#E5484D"];
+/** The app's speed ramp (TrackPolylines.kt), deliberately not themed: blue when crawling, red at 120+ km/h. */
+export const speedColors = ["#3DA9FC", "#30C48D", "#FFD230", "#FF8A3D", "#E5484D"];

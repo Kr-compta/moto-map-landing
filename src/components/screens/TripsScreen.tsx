@@ -16,41 +16,41 @@ const stats = [
 export function TripsScreen({ t, label }: { t: Dictionary["screens"]; label: string }) {
   return (
     <svg viewBox="0 0 300 600" role="img" aria-label={label} className="h-full w-full">
-      <rect width="300" height="600" fill="#0B0E14" />
-      <text x="20" y="84" fill="#F2F5FA" fontSize="24" fontWeight="700">
+      <rect width="300" height="600" fill="#171411" />
+      <text x="20" y="84" fill="#ECEAE9" fontSize="24" fontWeight="700">
         {t.trips}
       </text>
 
       {t.tripNames.map((name, i) => (
         <g key={name} transform={`translate(16 ${108 + i * 150})`}>
-          <rect width="268" height="134" rx="20" fill="#141922" stroke="#2C3543" />
-          <rect x="12" y="12" width="84" height="56" rx="12" fill="#121a17" />
+          <rect width="268" height="134" rx="20" fill="#201b18" stroke="#4B443F" />
+          <rect x="12" y="12" width="84" height="56" rx="12" fill="#110e0c" />
           <g transform="translate(14 14)" fill="none" strokeLinecap="round" strokeWidth="3.5">
             <path d={routes[i][0]} stroke={speedColors[i === 1 ? 3 : 2]} />
             <path d={routes[i][1]} stroke={speedColors[0]} />
           </g>
-          <text x="110" y="34" fill="#F2F5FA" fontSize="14" fontWeight="700">
+          <text x="110" y="34" fill="#ECEAE9" fontSize="14" fontWeight="700">
             {name}
           </text>
-          <text x="110" y="54" fill="#97A3B6" fontSize="11">
+          <text x="110" y="54" fill="#C0B9B4" fontSize="11">
             {t.tripDates[i]}
           </text>
           {i === 2 && (
             <g transform="translate(110 62)">
               <rect width="74" height="18" rx="9" fill="#2a2210" />
-              <text x="37" y="12.5" textAnchor="middle" fill="#FFB020" fontSize="9.5" fontWeight="700">
+              <text x="37" y="12.5" textAnchor="middle" fill="#F5BE0A" fontSize="9.5" fontWeight="700">
                 {t.recovered}
               </text>
             </g>
           )}
           {[t.distance, t.time, t.maxSpeed].map((k, j) => (
             <g key={k} transform={`translate(${14 + j * 86} 96)`}>
-              <text fill="#97A3B6" fontSize="9" letterSpacing="0.06em">
+              <text fill="#C0B9B4" fontSize="9" letterSpacing="0.06em">
                 {k.toUpperCase()}
               </text>
-              <text y="22" fill="#F2F5FA" fontSize="15" fontWeight="700" className="font-mono tabular">
+              <text y="22" fill="#ECEAE9" fontSize="15" fontWeight="700" className="font-mono tabular">
                 {stats[i][j]}
-                <tspan fill="#97A3B6" fontSize="9" fontWeight="400" dx="3">
+                <tspan fill="#C0B9B4" fontSize="9" fontWeight="400" dx="3">
                   {["km", "h", "km/h"][j]}
                 </tspan>
               </text>

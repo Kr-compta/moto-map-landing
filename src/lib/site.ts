@@ -5,6 +5,6 @@ export const site = {
   name: "MotoMap",
   author: "Amour Ramanantsiresy",
   contactUrl: "https://github.com/Kr-compta",
-  themeColor: "#0B0E14",
+  themeColor: "#171411",
   copyrightYear: 2026,
 };

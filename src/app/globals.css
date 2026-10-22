@@ -1,19 +1,19 @@
 @import "tailwindcss";
 
-/* Palette taken from the app's own theme (com.motomap.ui.theme). */
+/* The app's default Orange palette, dark scheme (com.motomap.ui.theme.Palettes). */
 :root {
-  --bg: #0b0e14;
-  --surface: #141922;
-  --surface-2: #1d2430;
-  --line: #2c3543;
-  --text: #f2f5fa;
-  --muted: #97a3b6;
-  --accent: #ff6b2d;
-  --accent-deep: #7a3316;
-  --go: #30c48d;
-  --amber: #ffb020;
-  --sky: #3da9fc;
-  --stop: #e5484d;
+  --bg: #171411;
+  --surface: #201b18;
+  --surface-2: #28231f;
+  --line: #4b443f;
+  --text: #eceae9;
+  --muted: #c0b9b4;
+  --accent: #f56e0a;
+  --accent-deep: #843f0b;
+  --go: #f5be0a; /* tertiary: GPS lock, anything confirmed */
+  --amber: #f5be0a;
+  --sky: #5e87e8;
+  --stop: #e26464;
   color-scheme: dark;
 }
 
@@ -64,8 +64,8 @@ body {
 
 .glow {
   background:
-    radial-gradient(60% 50% at 70% 20%, rgb(255 107 45 / 0.18), transparent 70%),
-    radial-gradient(40% 40% at 10% 80%, rgb(61 169 252 / 0.08), transparent 70%);
+    radial-gradient(60% 50% at 70% 20%, rgb(245 110 10 / 0.18), transparent 70%),
+    radial-gradient(40% 40% at 10% 80%, rgb(245 190 10 / 0.06), transparent 70%);
 }
 
 @keyframes rec-blink {
