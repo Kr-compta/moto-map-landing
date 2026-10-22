@@ -21,7 +21,7 @@ const fr = {
     video: "Vidéo",
     offline: "Hors ligne",
     faq: "FAQ",
-    cta: "Être prévenu",
+    cta: "Google Play",
     language: "Langue",
     home: "MotoMap, accueil",
   },
@@ -31,9 +31,9 @@ const fr = {
     titleHighlight: "le réseau s'arrête.",
     subtitle:
       "Vitesse, angle d'inclinaison et position sur une carte qui fonctionne sans signal. Chaque sortie est gardée sur votre téléphone — sans compte, rien n'est envoyé.",
-    primaryCta: "Être prévenu du lancement",
+    primaryCta: "Disponible sur Google Play",
     secondaryCta: "Voir les fonctions",
-    status: "En développement · bientôt sur Android",
+    status: "Sur Google Play · en français et en anglais",
     trust: ["Sans compte", "Cartes sans réseau", "Android 7.0 et plus"],
   },
   pillars: {
@@ -47,7 +47,7 @@ const fr = {
       },
       {
         title: "Vos sorties restent à vous",
-        body: "Aucun compte, aucun serveur MotoMap. Trajets, statistiques et vidéos sont stockés sur le téléphone, et nulle part ailleurs.",
+        body: "Aucun compte, aucun serveur, aucune pub ni mesure d'audience. Trajets, statistiques et vidéos sont stockés sur le téléphone, et nulle part ailleurs.",
       },
       {
         title: "Survit à une batterie à plat",
@@ -56,10 +56,10 @@ const fr = {
     ],
   },
   tabs: {
-    eyebrow: "Trois onglets, rien de plus",
+    eyebrow: "Trois écrans pour rouler",
     heading: "Tout ce qu'il faut, d'un coup d'œil",
     intro:
-      "Une interface qu'on lit en roulant : trois écrans, chacun avec une seule mission.",
+      "Une interface qu'on lit en roulant : trois écrans, chacun avec une seule mission. Le reste attend dans les Réglages : quatre palettes de couleurs, mode clair ou sombre, français ou anglais.",
     items: [
       {
         name: "Carte",
@@ -103,7 +103,7 @@ const fr = {
     body: "Regardez la sortie avec la télémétrie superposée : vitesse, inclinaison et ses pics, distance, temps, et une mini-carte qui suit la moto.",
     exportTitle: "Une seule vidéo, lisible partout",
     exportBody:
-      "Exportez une vidéo MP4 avec la sortie incrustée dans l'image. Placez chaque élément du bout du doigt — vitesse, inclinaison, carte, distance, temps, vitesse max, altitude, titre — ou retirez-le.",
+      "Exportez une vidéo MP4 avec la sortie incrustée dans l'image. Placez chaque élément du bout du doigt — vitesse, inclinaison, carte, distance, temps, vitesse max, altitude, titre — ou retirez-le. Puis partagez-la, ou enregistrez-la dans la galerie.",
     privacy:
       "La mini-carte se retire en un geste : partager un virage ne veut pas dire partager le chemin de chez vous.",
   },
@@ -209,19 +209,27 @@ const fr = {
         a: "Non. MotoMap montre où vous êtes et où vous êtes passé ; il ne calcule pas d'itinéraire. Il s'utilise très bien en complément de votre application de navigation.",
       },
       {
+        q: "Mes sorties sont-elles sauvegardées dans le cloud ?",
+        a: "Non, volontairement. MotoMap désactive même la sauvegarde automatique d'Android vers Google Drive : rien de vos trajets ne quitte le téléphone. Le revers, c'est que désinstaller l'application ou perdre le téléphone efface vos sorties ; exportez en vidéo celles qui comptent.",
+      },
+      {
+        q: "Dans quelles langues ?",
+        a: "Français et anglais. L'application suit la langue du téléphone, et vous pouvez en choisir une autre dans les Réglages.",
+      },
+      {
         q: "Sur quels téléphones fonctionne-t-il ?",
         a: "Sur Android 7.0 et plus récent. Il n'existe pas de version iPhone pour le moment.",
       },
       {
-        q: "Quand sera-t-il disponible ?",
-        a: "MotoMap est en cours de développement et sortira comme application payante sur Android. Contactez-nous via GitHub pour être tenu au courant.",
+        q: "Où le télécharger ?",
+        a: "Sur Google Play : cherchez « MotoMap » ou suivez le bouton de cette page.",
       },
     ],
   },
   cta: {
     heading: "Votre prochaine sortie mérite mieux qu'une barre de réseau.",
-    body: "MotoMap arrive bientôt sur Android. Laissez-nous un message pour être prévenu du lancement.",
-    button: "Nous contacter sur GitHub",
+    body: "Installez MotoMap depuis Google Play, téléchargez votre région et partez. Sans compte, sans réseau.",
+    button: "Télécharger sur Google Play",
   },
   footer: {
     tagline: "Le traceur GPS hors ligne pour motards.",

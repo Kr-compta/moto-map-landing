@@ -36,6 +36,7 @@ function structuredData(lang: string, t: Dictionary) {
         description: t.meta.description,
         url,
         operatingSystem: "Android 7.0+",
+        installUrl: site.playUrl,
         applicationCategory: "TravelApplication",
         inLanguage: localeTags[lang as keyof typeof localeTags].html,
         image: `${url}/opengraph-image`,

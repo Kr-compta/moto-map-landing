@@ -23,7 +23,7 @@ const en: Dictionary = {
     video: "Video",
     offline: "Offline",
     faq: "FAQ",
-    cta: "Get notified",
+    cta: "Google Play",
     language: "Language",
     home: "MotoMap, home",
   },
@@ -33,9 +33,9 @@ const en: Dictionary = {
     titleHighlight: "the signal ends.",
     subtitle:
       "Live speed, lean angle and position on a map that keeps working with no signal. Every ride is kept on your phone — no account, nothing uploaded.",
-    primaryCta: "Get notified at launch",
+    primaryCta: "Get it on Google Play",
     secondaryCta: "See the features",
-    status: "In development · coming to Android",
+    status: "On Google Play · in English and French",
     trust: ["No account", "Maps without signal", "Android 7.0 and up"],
   },
   pillars: {
@@ -49,7 +49,7 @@ const en: Dictionary = {
       },
       {
         title: "Your rides stay yours",
-        body: "No account, no MotoMap server. Trips, stats and video are stored on the phone and nowhere else.",
+        body: "No account, no server, no ads or analytics. Trips, stats and video are stored on the phone and nowhere else.",
       },
       {
         title: "Survives a flat battery",
@@ -58,9 +58,10 @@ const en: Dictionary = {
     ],
   },
   tabs: {
-    eyebrow: "Three tabs, nothing more",
+    eyebrow: "Three screens for the ride",
     heading: "Everything you need, at a glance",
-    intro: "An interface you can read while riding: three screens, each with one job.",
+    intro:
+      "An interface you can read while riding: three screens, each with one job. Everything else waits in Settings: four colour palettes, light or dark mode, English or French.",
     items: [
       {
         name: "Map",
@@ -104,7 +105,7 @@ const en: Dictionary = {
     body: "Watch the ride with telemetry overlaid: speed, lean with its peaks, distance, time, and a map inset that follows the bike.",
     exportTitle: "One video that plays anywhere",
     exportBody:
-      "Export a single MP4 with the ride burned into the picture. Drag each piece into place — speed, lean, map, distance, ride time, top speed, altitude, title — or switch it off.",
+      "Export a single MP4 with the ride burned into the picture. Drag each piece into place — speed, lean, map, distance, ride time, top speed, altitude, title — or switch it off. Then share it, or save it to the gallery.",
     privacy:
       "The map inset comes off in one tap: sharing a corner shouldn't mean sharing the road home.",
   },
@@ -210,19 +211,27 @@ const en: Dictionary = {
         a: "No. MotoMap shows where you are and where you've been; it doesn't plan routes. It works well alongside your navigation app.",
       },
       {
+        q: "Are my rides backed up to the cloud?",
+        a: "No, on purpose. MotoMap even switches off Android's automatic backup to Google Drive, so nothing about your rides leaves the phone. The flip side is that uninstalling the app or losing the phone deletes your rides; export the ones that matter as video.",
+      },
+      {
+        q: "Which languages?",
+        a: "English and French. The app follows your phone's language, and you can pick the other one in Settings.",
+      },
+      {
         q: "Which phones does it run on?",
         a: "Android 7.0 and newer. There's no iPhone version for now.",
       },
       {
-        q: "When will it be available?",
-        a: "MotoMap is in development and will launch as a paid Android app. Get in touch on GitHub to hear when it's out.",
+        q: "Where do I get it?",
+        a: "On Google Play: search for \"MotoMap\" or follow the button on this page.",
       },
     ],
   },
   cta: {
     heading: "Your next ride deserves better than one bar of signal.",
-    body: "MotoMap is coming to Android soon. Drop us a message to hear when it launches.",
-    button: "Contact us on GitHub",
+    body: "Install MotoMap from Google Play, download your area and go. No account, no signal needed.",
+    button: "Get it on Google Play",
   },
   footer: {
     tagline: "The offline GPS tracker for motorcycle riders.",

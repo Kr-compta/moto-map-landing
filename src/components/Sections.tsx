@@ -55,7 +55,7 @@ function IconBadge({ children, tone = "accent" }: { children: ReactNode; tone?: 
 function PrimaryButton({ children }: { children: ReactNode }) {
   return (
     <a
-      href={site.contactUrl}
+      href={site.playUrl}
       target="_blank"
       rel="noopener"
       className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-accent px-7 text-base font-semibold text-bg shadow-[0_10px_30px_-10px_rgb(245_110_10/0.7)] transition hover:brightness-110 active:scale-[0.98]"
