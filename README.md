@@ -36,8 +36,8 @@ is configured for a private one.
 | --- | --- | --- |
 | `SITE_URL` | In production | Public origin, e.g. `https://motomap.app`. Used for canonical URLs, hreflang links, the sitemap, `robots.txt` and Open Graph. Falls back to `http://localhost:3000`. |
 
-Site-wide constants (name, author, contact link, theme colour, copyright year) live in
-[`src/lib/site.ts`](src/lib/site.ts).
+Site-wide constants (name, author, contact link and email, Google Play URL, theme colour, copyright
+year) live in [`src/lib/site.ts`](src/lib/site.ts). Every download button points at `site.playUrl`.
 
 ## Project structure
 
@@ -49,17 +49,19 @@ src/
 │   │   ├── layout.tsx       <html lang>, metadata, hreflang, Open Graph
 │   │   ├── page.tsx         The page: sections in order + JSON-LD
 │   │   ├── opengraph-image.tsx  Per-locale social image
+│   │   ├── terms/, privacy/ The app's terms and privacy policy (/fr/terms, /en/privacy, …)
 │   │   └── not-found.tsx
 │   ├── sitemap.ts, robots.ts, manifest.ts
 │   ├── icon.svg, apple-icon.tsx
 │   └── globals.css          Tailwind entry point and theme
 ├── components/
 │   ├── Sections.tsx         Every page section (Hero, Pillars, Tabs, Video, …)
+│   ├── LegalPage.tsx        Layout and metadata shared by the two legal pages
 │   ├── Header.tsx, Footer.tsx, LanguageSwitcher.tsx, PhoneFrame.tsx, Icons.tsx
 │   └── screens/             SVG mock-ups of the app's Map, Speed, Trips and replay screens
 ├── i18n/
 │   ├── config.ts            Supported locales, cookie name, Accept-Language negotiation
-│   └── dictionaries/        fr.ts, en.ts: all page copy
+│   └── dictionaries/        fr.ts, en.ts: all page copy; legal/ holds the terms and privacy text
 └── lib/site.ts              Site constants and SITE_URL
 ```
 
@@ -95,6 +97,21 @@ key in `fr.ts` and `en.ts`, write the component, then place it in `src/app/[lang
 
 The phone screens in `components/screens/` are hand-drawn SVG illustrations, not real map tiles or
 screenshots.
+
+## Colours
+
+The palette is the app's default **Orange** theme, dark scheme (`Palettes.kt` in the app). The CSS
+tokens in `globals.css` map onto its roles: `accent` is primary, `go` and `amber` are tertiary (GPS
+lock, anything confirmed), `sky` is secondary (lean left), `stop` is error. The speed ramp in
+`screens/geometry.ts` is the app's own and, as in the app, is deliberately not themed. The icons
+reproduce the launcher icon, so they keep its `#0B0E14` background.
+
+## Legal pages
+
+`/[lang]/terms` and `/[lang]/privacy` publish the documents the app shows in Settings → Legal. Their
+text is in `src/i18n/dictionaries/legal/`, taken from the app's `terms_*` and `privacy_*` strings.
+When those change in the app, change them here too, and keep the edition and date in step. The
+privacy page's URL is the one to give the Play Console.
 
 ## SEO
 

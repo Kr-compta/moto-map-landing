@@ -1,4 +1,5 @@
 import type { Dictionary } from "./fr";
+import legal from "./legal/en";
 
 const en: Dictionary = {
   meta: {
@@ -240,7 +241,11 @@ const en: Dictionary = {
     contact: "Contact",
     mapData: "Map data",
     language: "Language",
+    legal: "Legal",
+    terms: "Terms and conditions",
+    privacy: "Privacy policy",
   },
+  legal,
   screens: {
     speedUnit: "km/h",
     lean: "Lean",

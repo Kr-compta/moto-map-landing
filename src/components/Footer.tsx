@@ -32,6 +32,19 @@ export function Footer({ lang, t }: { lang: Locale; t: Dictionary["footer"] }) {
             <GitHub className="size-4" />
             github.com/Kr-compta
           </a>
+          <h2 className="mt-8 text-sm font-semibold">{t.legal}</h2>
+          <ul className="mt-3 space-y-2 text-sm text-muted">
+            <li>
+              <Link href={`/${lang}/terms`} className="hover:text-text">
+                {t.terms}
+              </Link>
+            </li>
+            <li>
+              <Link href={`/${lang}/privacy`} className="hover:text-text">
+                {t.privacy}
+              </Link>
+            </li>
+          </ul>
           <h2 className="mt-8 text-sm font-semibold">{t.language}</h2>
           <ul className="mt-3 flex gap-4 text-sm text-muted">
             <li>

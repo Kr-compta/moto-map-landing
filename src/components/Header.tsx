@@ -4,12 +4,14 @@ import { site } from "@/lib/site";
 import { Logo } from "./Icons";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
-export function Header({ lang, t }: { lang: Locale; t: Dictionary["nav"] }) {
+/** `path` is the page below the locale ("" for home, "/terms", …); section links point home from elsewhere. */
+export function Header({ lang, t, path = "" }: { lang: Locale; t: Dictionary["nav"]; path?: string }) {
+  const home = path ? `/${lang}` : "";
   const links = [
-    ["#features", t.features],
-    ["#video", t.video],
-    ["#offline", t.offline],
-    ["#faq", t.faq],
+    [`${home}#features`, t.features],
+    [`${home}#video`, t.video],
+    [`${home}#offline`, t.offline],
+    [`${home}#faq`, t.faq],
   ];
 
   return (
@@ -39,7 +41,7 @@ export function Header({ lang, t }: { lang: Locale; t: Dictionary["nav"] }) {
         </nav>
 
         <div className="ml-auto flex items-center gap-3 md:ml-0">
-          <LanguageSwitcher current={lang} label={t.language} />
+          <LanguageSwitcher current={lang} label={t.language} path={path} />
           <a
             href={site.playUrl}
             target="_blank"

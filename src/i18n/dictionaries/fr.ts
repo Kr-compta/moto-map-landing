@@ -1,3 +1,5 @@
+import legal from "./legal/fr";
+
 const fr = {
   meta: {
     title: "MotoMap — Traceur GPS moto hors ligne pour Android",
@@ -238,7 +240,11 @@ const fr = {
     contact: "Contact",
     mapData: "Données cartographiques",
     language: "Langue",
+    legal: "Mentions légales",
+    terms: "Conditions d'utilisation",
+    privacy: "Politique de confidentialité",
   },
+  legal,
   screens: {
     speedUnit: "km/h",
     lean: "Inclinaison",
