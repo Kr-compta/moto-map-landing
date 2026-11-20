@@ -23,7 +23,7 @@ const fr = {
     video: "Vidéo",
     offline: "Hors ligne",
     faq: "FAQ",
-    cta: "Google Play",
+    cta: "Télécharger",
     language: "Langue",
     home: "MotoMap, accueil",
   },
@@ -33,10 +33,10 @@ const fr = {
     titleHighlight: "le réseau s'arrête.",
     subtitle:
       "Vitesse, angle d'inclinaison et position sur une carte qui fonctionne sans signal. Chaque sortie est gardée sur votre téléphone — sans compte, rien n'est envoyé.",
-    primaryCta: "Disponible sur Google Play",
+    primaryCta: "Télécharger l'APK",
     secondaryCta: "Voir les fonctions",
-    status: "Sur Google Play · en français et en anglais",
-    trust: ["Sans compte", "Cartes sans réseau", "Android 7.0 et plus"],
+    status: "APK Android · 4,5 Mo · en français et en anglais",
+    trust: ["Sans compte", "Cartes sans réseau", "Android 5.0 et plus"],
   },
   pillars: {
     heading: "Pensé pour la route, pas pour le cloud",
@@ -58,10 +58,10 @@ const fr = {
     ],
   },
   tabs: {
-    eyebrow: "Trois écrans pour rouler",
+    eyebrow: "Quatre onglets",
     heading: "Tout ce qu'il faut, d'un coup d'œil",
     intro:
-      "Une interface qu'on lit en roulant : trois écrans, chacun avec une seule mission. Le reste attend dans les Réglages : quatre palettes de couleurs, mode clair ou sombre, français ou anglais.",
+      "Une interface qu'on lit en roulant : trois écrans pour la route, chacun avec une seule mission, et les Réglages pour tout ce qui se décide avant de partir.",
     items: [
       {
         name: "Carte",
@@ -74,9 +74,14 @@ const fr = {
         body: "Compteur analogique plein écran, jauge d'angle d'inclinaison avec maintien des pics, et statistiques de la sortie.",
       },
       {
-        name: "Trajets",
+        name: "Sorties",
         title: "Chaque sortie, gardée",
         body: "Le tracé coloré selon la vitesse, le résumé complet, et les profils de vitesse et d'inclinaison sur toute la sortie.",
+      },
+      {
+        name: "Réglages",
+        title: "Le reste, au même endroit",
+        body: "Fond de carte et téléchargements hors ligne, qualité vidéo et son, quatre palettes de couleurs, mode clair ou sombre, français ou anglais.",
       },
     ],
   },
@@ -220,18 +225,18 @@ const fr = {
       },
       {
         q: "Sur quels téléphones fonctionne-t-il ?",
-        a: "Sur Android 7.0 et plus récent. Il n'existe pas de version iPhone pour le moment.",
+        a: "Sur Android 5.0 et plus récent. Sur les téléphones les plus anciens, la vidéo de sortie peut ne pas fonctionner ; tout le reste, oui. Il n'existe pas de version iPhone pour le moment.",
       },
       {
         q: "Où le télécharger ?",
-        a: "Sur Google Play : cherchez « MotoMap » ou suivez le bouton de cette page.",
+        a: "Avec le bouton de cette page : l'APK (4,5 Mo) est hébergé sur Google Drive. Ouvrez-le sur le téléphone ; Android demande une seule fois d'autoriser l'installation depuis l'application utilisée (Drive, Chrome ou Fichiers). Google Play Protect peut signaler un développeur inconnu : choisissez « Installer quand même ». Une nouvelle version s'installe par-dessus l'ancienne sans effacer vos sorties.",
       },
     ],
   },
   cta: {
     heading: "Votre prochaine sortie mérite mieux qu'une barre de réseau.",
-    body: "Installez MotoMap depuis Google Play, téléchargez votre région et partez. Sans compte, sans réseau.",
-    button: "Télécharger sur Google Play",
+    body: "Téléchargez l'APK, installez-le, enregistrez votre région et partez. Sans compte, sans réseau.",
+    button: "Télécharger l'APK",
   },
   footer: {
     tagline: "Le traceur GPS hors ligne pour motards.",
@@ -246,23 +251,21 @@ const fr = {
   },
   legal,
   screens: {
-    speedUnit: "km/h",
-    lean: "Inclinaison",
-    peak: "Pic",
-    recording: "ENREG.",
-    paused: "PAUSE",
+    shots: {
+      map: "L'écran Carte de MotoMap : carte hors ligne et bouton Démarrer la sortie",
+      mapRecording: "L'écran Carte pendant une sortie : enregistrement, vitesse, inclinaison, distance, durée, boutons Pause et Terminer",
+      speed: "L'écran Vitesse : compteur analogique et jauge d'angle d'inclinaison",
+      settings: "L'écran Réglages : fond de carte, cartes hors ligne, qualité vidéo, son et langue",
+      replay: "Le replay d'une sortie : vidéo de la route avec vitesse, inclinaison, distance et mini-carte",
+    },
     distance: "Distance",
     time: "Temps",
-    average: "Moyenne",
-    pause: "Pause",
-    finish: "Terminer",
-    trips: "Trajets",
+    trips: "Sorties",
     offline: "Hors ligne",
     maxSpeed: "Max",
     tripNames: ["Col de la Croix", "Gorges du Tarn", "Route des crêtes"],
     tripDates: ["Sam. 12 sept.", "Dim. 6 sept.", "Sam. 29 août"],
     recovered: "Récupéré",
-    replay: "Replay",
   },
 };
 

@@ -24,7 +24,7 @@ const en: Dictionary = {
     video: "Video",
     offline: "Offline",
     faq: "FAQ",
-    cta: "Google Play",
+    cta: "Download",
     language: "Language",
     home: "MotoMap, home",
   },
@@ -34,10 +34,10 @@ const en: Dictionary = {
     titleHighlight: "the signal ends.",
     subtitle:
       "Live speed, lean angle and position on a map that keeps working with no signal. Every ride is kept on your phone — no account, nothing uploaded.",
-    primaryCta: "Get it on Google Play",
+    primaryCta: "Download the APK",
     secondaryCta: "See the features",
-    status: "On Google Play · in English and French",
-    trust: ["No account", "Maps without signal", "Android 7.0 and up"],
+    status: "Android APK · 4.5 MB · in English and French",
+    trust: ["No account", "Maps without signal", "Android 5.0 and up"],
   },
   pillars: {
     heading: "Built for the road, not the cloud",
@@ -59,10 +59,10 @@ const en: Dictionary = {
     ],
   },
   tabs: {
-    eyebrow: "Three screens for the ride",
+    eyebrow: "Four tabs",
     heading: "Everything you need, at a glance",
     intro:
-      "An interface you can read while riding: three screens, each with one job. Everything else waits in Settings: four colour palettes, light or dark mode, English or French.",
+      "An interface you can read while riding: three screens for the road, each with one job, and Settings for everything you decide before you leave.",
     items: [
       {
         name: "Map",
@@ -78,6 +78,11 @@ const en: Dictionary = {
         name: "Trips",
         title: "Every ride, kept",
         body: "The route coloured by speed, the full summary, and speed and lean profiles across the whole ride.",
+      },
+      {
+        name: "Settings",
+        title: "Everything else, in one place",
+        body: "Map style and offline downloads, video quality and sound, four colour palettes, light or dark mode, English or French.",
       },
     ],
   },
@@ -221,18 +226,18 @@ const en: Dictionary = {
       },
       {
         q: "Which phones does it run on?",
-        a: "Android 7.0 and newer. There's no iPhone version for now.",
+        a: "Android 5.0 and newer. On the oldest phones ride video may not work; everything else does. There's no iPhone version for now.",
       },
       {
         q: "Where do I get it?",
-        a: "On Google Play: search for \"MotoMap\" or follow the button on this page.",
+        a: "From the button on this page: the APK (4.5 MB) is hosted on Google Drive. Open it on your phone; Android asks once to allow installs from the app you used (Drive, Chrome or Files). Google Play Protect may warn about an unknown developer: choose \"Install anyway\". A new version installs over the old one and keeps your rides.",
       },
     ],
   },
   cta: {
     heading: "Your next ride deserves better than one bar of signal.",
-    body: "Install MotoMap from Google Play, download your area and go. No account, no signal needed.",
-    button: "Get it on Google Play",
+    body: "Download the APK, install it, save your area and go. No account, no signal needed.",
+    button: "Download the APK",
   },
   footer: {
     tagline: "The offline GPS tracker for motorcycle riders.",
@@ -247,23 +252,21 @@ const en: Dictionary = {
   },
   legal,
   screens: {
-    speedUnit: "km/h",
-    lean: "Lean",
-    peak: "Peak",
-    recording: "REC",
-    paused: "PAUSED",
+    shots: {
+      map: "MotoMap's Map screen: offline map and the Start ride button",
+      mapRecording: "The Map screen during a ride: recording, speed, lean, distance, duration, Pause and Finish buttons",
+      speed: "The Speed screen: analogue speedometer and lean-angle gauge",
+      settings: "The Settings screen: map style, offline maps, video quality, sound and language",
+      replay: "A ride replay: road footage with speed, lean, distance and a map inset",
+    },
     distance: "Distance",
     time: "Time",
-    average: "Average",
-    pause: "Pause",
-    finish: "Finish",
     trips: "Trips",
     offline: "Offline",
     maxSpeed: "Max",
     tripNames: ["Col de la Croix", "Tarn Gorges", "Ridge Road"],
     tripDates: ["Sat 12 Sep", "Sun 6 Sep", "Sat 29 Aug"],
     recovered: "Recovered",
-    replay: "Replay",
   },
 };
 

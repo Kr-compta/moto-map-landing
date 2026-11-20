@@ -43,7 +43,7 @@ export function Header({ lang, t, path = "" }: { lang: Locale; t: Dictionary["na
         <div className="ml-auto flex items-center gap-3 md:ml-0">
           <LanguageSwitcher current={lang} label={t.language} path={path} />
           <a
-            href={site.playUrl}
+            href={site.downloadUrl}
             target="_blank"
             rel="noopener"
             className="hidden rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-bg transition hover:brightness-110 sm:inline-flex"

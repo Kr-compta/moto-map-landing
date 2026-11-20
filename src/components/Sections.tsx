@@ -3,9 +3,7 @@ import type { Dictionary } from "@/i18n/dictionaries";
 import { site } from "@/lib/site";
 import * as I from "./Icons";
 import { PhoneFrame } from "./PhoneFrame";
-import { MapScreen } from "./screens/MapScreen";
-import { ReplayFrame } from "./screens/ReplayFrame";
-import { SpeedScreen } from "./screens/SpeedScreen";
+import { Screenshot, shots } from "./screens/Screenshot";
 import { TripsScreen } from "./screens/TripsScreen";
 
 /* ---------- primitives ---------- */
@@ -55,7 +53,7 @@ function IconBadge({ children, tone = "accent" }: { children: ReactNode; tone?: 
 function PrimaryButton({ children }: { children: ReactNode }) {
   return (
     <a
-      href={site.playUrl}
+      href={site.downloadUrl}
       target="_blank"
       rel="noopener"
       className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-accent px-7 text-base font-semibold text-bg shadow-[0_10px_30px_-10px_rgb(245_110_10/0.7)] transition hover:brightness-110 active:scale-[0.98]"
@@ -106,12 +104,12 @@ export function Hero({ t, screens }: { t: Dictionary["hero"]; screens: Dictionar
         <div className="relative mx-auto flex w-full max-w-md justify-center lg:max-w-none">
           <div className="absolute top-10 left-0 hidden w-[46%] -rotate-6 opacity-70 sm:block" aria-hidden>
             <PhoneFrame>
-              <MapScreen t={screens} label="" />
+              <Screenshot src={shots.map} alt="" sizes="(min-width: 1024px) 260px, 45vw" />
             </PhoneFrame>
           </div>
           <div className="float relative z-10 w-[64%] sm:w-[56%] sm:translate-x-[22%]">
             <PhoneFrame>
-              <SpeedScreen t={screens} label={`${t.titleStart} ${t.titleHighlight}`} />
+              <Screenshot src={shots.speed} alt={screens.shots.speed} sizes="(min-width: 1024px) 320px, 64vw" priority />
             </PhoneFrame>
           </div>
           <div className="absolute bottom-16 left-2 z-20 flex items-center gap-2.5 rounded-2xl border border-line bg-surface/95 px-4 py-3 shadow-xl backdrop-blur sm:left-6">
@@ -155,31 +153,32 @@ export function Pillars({ t }: { t: Dictionary["pillars"] }) {
 /* ---------- the three tabs ---------- */
 
 export function Tabs({ t, screens }: { t: Dictionary["tabs"]; screens: Dictionary["screens"] }) {
-  const Screens = [MapScreen, SpeedScreen, TripsScreen];
+  // No capture of the Trips tab yet, so it keeps its illustration.
+  const pictures = [
+    <Screenshot key="map" src={shots.mapRecording} alt={screens.shots.mapRecording} />,
+    <Screenshot key="speed" src={shots.speed} alt={screens.shots.speed} />,
+    <TripsScreen key="trips" t={screens} label={`${t.items[2].name} — ${t.items[2].title}`} />,
+    <Screenshot key="settings" src={shots.settings} alt={screens.shots.settings} />,
+  ];
 
   return (
     <section aria-labelledby="features" className="border-y border-line/60 bg-surface/40 py-20 sm:py-28">
       <Container>
         <SectionHeading id="features" eyebrow={t.eyebrow} heading={t.heading} intro={t.intro} center />
-        <ol className="mt-16 grid gap-12 md:grid-cols-3 md:gap-8">
-          {t.items.map((item, i) => {
-            const Screen = Screens[i];
-            return (
-              <li key={item.name} className="flex flex-col items-center text-center">
-                <div className="w-full max-w-[250px]">
-                  <PhoneFrame>
-                    <Screen t={screens} label={`${item.name} — ${item.title}`} />
-                  </PhoneFrame>
-                </div>
-                <p className="mt-8 inline-flex items-center gap-2 rounded-full bg-surface-2 px-3 py-1 text-xs font-semibold tracking-wide text-muted uppercase">
-                  <span className="font-mono text-accent">{i + 1}</span>
-                  {item.name}
-                </p>
-                <h3 className="mt-3 text-xl font-semibold">{item.title}</h3>
-                <p className="mt-2 max-w-xs leading-relaxed text-muted">{item.body}</p>
-              </li>
-            );
-          })}
+        <ol className="mt-16 grid gap-12 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4">
+          {t.items.map((item, i) => (
+            <li key={item.name} className="flex flex-col items-center text-center">
+              <div className="w-full max-w-[250px]">
+                <PhoneFrame>{pictures[i]}</PhoneFrame>
+              </div>
+              <p className="mt-8 inline-flex items-center gap-2 rounded-full bg-surface-2 px-3 py-1 text-xs font-semibold tracking-wide text-muted uppercase">
+                <span className="font-mono text-accent">{i + 1}</span>
+                {item.name}
+              </p>
+              <h3 className="mt-3 text-xl font-semibold">{item.title}</h3>
+              <p className="mt-2 max-w-xs leading-relaxed text-muted">{item.body}</p>
+            </li>
+          ))}
         </ol>
       </Container>
     </section>
@@ -256,24 +255,26 @@ export function Replay({ t, screens }: { t: Dictionary["replay"]; screens: Dicti
     <section aria-labelledby="replay" className="border-y border-line/60 bg-surface/40 py-20 sm:py-28">
       <Container>
         <SectionHeading id="replay" eyebrow={t.eyebrow} heading={t.heading} intro={t.body} center />
-        <div className="mx-auto mt-14 max-w-4xl overflow-hidden rounded-3xl border border-line shadow-[0_40px_80px_-40px_rgb(0_0_0/0.9)]">
-          <div className="aspect-video">
-            <ReplayFrame t={screens} label={`${t.eyebrow} — ${t.exportTitle}`} />
+        <div className="mx-auto mt-14 grid max-w-4xl items-center gap-10 md:grid-cols-[minmax(0,280px)_1fr]">
+          <div className="mx-auto w-full max-w-[280px]">
+            <PhoneFrame>
+              <Screenshot src={shots.replay} alt={screens.shots.replay} sizes="(min-width: 768px) 280px, 75vw" />
+            </PhoneFrame>
           </div>
-        </div>
-        <div className="mx-auto mt-8 grid max-w-4xl gap-5 md:grid-cols-[1.5fr_1fr]">
-          <div className="rounded-3xl border border-line bg-surface p-7">
-            <IconBadge>
-              <I.Download className="size-5" />
-            </IconBadge>
-            <h3 className="mt-5 text-xl font-semibold">{t.exportTitle}</h3>
-            <p className="mt-2 leading-relaxed text-muted">{t.exportBody}</p>
-          </div>
-          <div className="rounded-3xl border border-line bg-surface p-7">
-            <IconBadge tone="sky">
-              <I.Shield className="size-5" />
-            </IconBadge>
-            <p className="mt-5 leading-relaxed">{t.privacy}</p>
+          <div className="grid gap-5">
+            <div className="rounded-3xl border border-line bg-surface p-7">
+              <IconBadge>
+                <I.Download className="size-5" />
+              </IconBadge>
+              <h3 className="mt-5 text-xl font-semibold">{t.exportTitle}</h3>
+              <p className="mt-2 leading-relaxed text-muted">{t.exportBody}</p>
+            </div>
+            <div className="rounded-3xl border border-line bg-surface p-7">
+              <IconBadge tone="sky">
+                <I.Shield className="size-5" />
+              </IconBadge>
+              <p className="mt-5 leading-relaxed">{t.privacy}</p>
+            </div>
           </div>
         </div>
       </Container>

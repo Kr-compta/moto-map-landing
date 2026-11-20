@@ -6,8 +6,8 @@ export const site = {
   author: "Amour Ramanantsiresy",
   contactUrl: "https://github.com/Kr-compta",
   contactEmail: "amour@ramana.mg",
-  /** Store listing, from the app's applicationId (com.motomap). */
-  playUrl: "https://play.google.com/store/apps/details?id=com.motomap",
+  /** The `site` build (Android 5+), shared from Google Drive. */
+  downloadUrl: "https://drive.google.com/file/d/1D4QrIcKwI0wZDeWhabRVdWjOCerF9aOQ/view?usp=sharing",
   themeColor: "#171411",
   copyrightYear: 2026,
 };

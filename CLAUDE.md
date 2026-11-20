@@ -29,8 +29,9 @@ robots are built from it and fall back to `http://localhost:3000`.
 - `src/app/[lang]/` — root layout (metadata, hreflang, Open Graph), page (+ JSON-LD:
   MobileApplication, FAQPage), per-locale OG image. Both locales are prerendered at build time.
 - `src/app/{sitemap,robots,manifest}.ts`, `icon.svg`, `apple-icon.tsx` — SEO / icon files.
-- `src/components/Sections.tsx` — every page section; `screens/` — SVG mock-ups of the app's
-  Map, Speed, Trips and replay screens (illustrations, not real map tiles).
+- `src/components/Sections.tsx` — every page section. `src/assets/screens/` holds real captures of
+  the app (French UI), shown through `screens/Screenshot.tsx`; the Trips tab has none yet, so
+  `screens/TripsScreen.tsx` is still an SVG illustration.
 
 ## The app this page sells: `/Users/macbook/motomap`
 
@@ -62,8 +63,9 @@ under `app/src/main/res/mipmap*`.
 ## Legal constraints that affect page content
 
 - MotoMap is **proprietary, all rights reserved**, intended as a paid app. Don't describe it as open
-  source or link the APKs in `/Users/macbook/motomap/dist/` for public download — they are
-  development builds that may not be redistributed.
+  source. The site's download buttons point to the `site` build (Android 5+) the author shares from
+  Google Drive (`downloadUrl` in `src/lib/site.ts`); don't link the APKs in
+  `/Users/macbook/motomap/dist/` or anywhere else.
 - Copyright © 2026 Amour Ramanantsiresy. Contact for enquiries: GitHub (https://github.com/Kr-compta).
 - Any map imagery shown must keep its attribution: © OpenStreetMap contributors (ODbL), OpenTopoMap
   (CC-BY-SA), HikeBikeMap.
