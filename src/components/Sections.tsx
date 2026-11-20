@@ -127,16 +127,17 @@ export function Hero({ t, screens }: { t: Dictionary["hero"]; screens: Dictionar
 export function Pillars({ t }: { t: Dictionary["pillars"] }) {
   const icons = [
     <I.NoSignal key="0" className="size-5" />,
-    <I.Lock key="1" className="size-5" />,
-    <I.Battery key="2" className="size-5" />,
+    <I.PhoneRec key="1" className="size-5" />,
+    <I.Lock key="2" className="size-5" />,
+    <I.Battery key="3" className="size-5" />,
   ];
-  const tones = ["go", "sky", "amber"] as const;
+  const tones = ["go", "accent", "sky", "amber"] as const;
 
   return (
     <section aria-labelledby="pillars" className="py-20 sm:py-28">
       <Container>
         <SectionHeading id="pillars" heading={t.heading} intro={t.intro} center />
-        <ul className="mt-14 grid gap-5 md:grid-cols-3">
+        <ul className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {t.items.map((item, i) => (
             <li key={item.title} className="rounded-3xl border border-line bg-surface p-7 transition-colors hover:border-muted/40">
               <IconBadge tone={tones[i]}>{icons[i]}</IconBadge>
@@ -359,6 +360,41 @@ export function Offline({ t }: { t: Dictionary["offline"] }) {
           </div>
         </div>
         <p className="mt-6 max-w-3xl text-sm leading-relaxed text-muted">{t.styleNote}</p>
+      </Container>
+    </section>
+  );
+}
+
+/* ---------- full feature inventory ---------- */
+
+export function AllFeatures({ t }: { t: Dictionary["allFeatures"] }) {
+  return (
+    <section aria-labelledby="all-features" className="border-t border-line/60 bg-surface/40 py-20 sm:py-28">
+      <Container>
+        <SectionHeading id="all-features" eyebrow={t.eyebrow} heading={t.heading} intro={t.intro} center />
+        {/* Columns rather than a grid: the groups differ in length, and a grid would leave gaps under the short ones. */}
+        <div className="mt-14 gap-5 md:columns-2 lg:columns-3">
+          {t.groups.map((group, i) => (
+            <section
+              key={group.title}
+              aria-labelledby={`all-features-${i}`}
+              className="mb-5 break-inside-avoid rounded-3xl border border-line bg-surface p-7"
+            >
+              <h3 id={`all-features-${i}`} className="flex items-center gap-3 text-lg font-semibold">
+                <span className="font-mono text-sm text-accent tabular">{String(i + 1).padStart(2, "0")}</span>
+                {group.title}
+              </h3>
+              <ul className="mt-4 space-y-2.5 text-[15px] leading-relaxed text-muted">
+                {group.items.map((item) => (
+                  <li key={item} className="flex gap-2.5">
+                    <I.Check className="mt-1 size-4 shrink-0 text-go" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ))}
+        </div>
       </Container>
     </section>
   );

@@ -36,16 +36,20 @@ const fr = {
     primaryCta: "Télécharger l'APK",
     secondaryCta: "Voir les fonctions",
     status: "APK Android · 4,5 Mo · en français et en anglais",
-    trust: ["Sans compte", "Cartes sans réseau", "Android 5.0 et plus"],
+    trust: ["Sans compte", "Cartes sans réseau", "Enregistre écran éteint", "Android 5.0 et plus"],
   },
   pillars: {
     heading: "Pensé pour la route, pas pour le cloud",
     intro:
-      "Trois promesses qui tiennent même au fond d'une vallée, à l'étranger ou avec 2 % de batterie.",
+      "Quatre promesses qui tiennent même au fond d'une vallée, à l'étranger ou avec 2 % de batterie.",
     items: [
       {
         title: "Fonctionne sans réseau",
         body: "La carte se met en cache au fil de vos routes et vous pouvez télécharger une région à l'avance. Pas de signal ? Rien ne change.",
+      },
+      {
+        title: "Enregistre écran éteint",
+        body: "Verrouillez le téléphone ou laissez l'écran s'éteindre dans le support : la sortie continue de s'enregistrer, vidéo comprise. Une notification indique qu'elle est en cours.",
       },
       {
         title: "Vos sorties restent à vous",
@@ -184,6 +188,117 @@ const fr = {
     styleNote:
       "Le téléchargement de zone fonctionne avec les styles OpenTopoMap et HikeBikeMap. Le style OpenStreetMap standard ne peut pas être pré-téléchargé (règle d'usage des serveurs OSM), mais il se met en cache normalement en roulant.",
   },
+  allFeatures: {
+    eyebrow: "Inventaire complet",
+    heading: "Tout ce que fait MotoMap",
+    intro: "Chaque fonction de la version actuelle, écran par écran.",
+    groups: [
+      {
+        title: "Carte",
+        items: [
+          "Trois fonds de carte : OpenStreetMap, OpenTopoMap et HikeBikeMap",
+          "Position et cap, marqueur orienté, tracé de la sortie en direct",
+          "Quatre boutons seulement : recentrer, hors ligne strict, armer la vidéo, réglages vidéo",
+          "État du GPS (désactivé, recherche, verrouillé) : un toucher ouvre les réglages du téléphone",
+          "Pendant la sortie : vitesse, inclinaison, distance, durée et moyenne, avec ENREGISTREMENT ou PAUSE écrit en toutes lettres",
+          "Moniteur caméra avec minuteur REC, agrandi d'un toucher",
+        ],
+      },
+      {
+        title: "Hors ligne",
+        items: [
+          "Chaque tuile affichée est gardée sur le téléphone, sans date d'expiration",
+          "Téléchargement d'une zone : cadrez une région, choisissez le niveau de détail (jusqu'à 25 000 tuiles)",
+          "Chaque fond indique s'il est téléchargeable ; pour OpenStreetMap, qui ne l'est pas, l'app propose OpenTopoMap ou HikeBikeMap",
+          "Mode hors ligne strict : aucune donnée consommée en itinérance",
+        ],
+      },
+      {
+        title: "Compteur",
+        items: [
+          "Compteur de vitesse analogique plein écran",
+          "Jauge d'inclinaison avec les pics gauche et droit maintenus",
+          "Remise à zéro de l'inclinaison selon votre support, un zéro pour le portrait et un pour le paysage",
+          "Distance, temps, vitesse max et moyenne en roulant",
+          "Cap et altitude",
+        ],
+      },
+      {
+        title: "Enregistrement",
+        items: [
+          "Continue écran éteint ou téléphone verrouillé, signalé par une notification de sortie en cours",
+          "Sauvegarde continue toutes les cinq secondes, pas seulement à la fin",
+          "Sortie récupérée après une coupure et marquée « récupérée » ; arrêt propre quand la batterie devient critique",
+          "Un démarrage accidentel (moins de trois positions) est écarté, sauf s'il porte de la vidéo",
+          "GPS filtré : positions imprécises et sauts impossibles rejetés, vitesse par effet Doppler, sans Google Play Services",
+          "Pic d'inclinaison compté seulement au-dessus de 11 km/h",
+        ],
+      },
+      {
+        title: "Vidéo embarquée",
+        items: [
+          "Armée depuis la carte, pour toute la sortie",
+          "Téléphone en portrait ou en paysage, caméra avant ou arrière, résolution, son",
+          "Caméra avant jamais en miroir ; si l'objectif choisi manque, l'autre prend le relais et vous êtes prévenu",
+          "Segments d'une minute : une coupure ne coûte que le segment en cours",
+          "Fichiers privés à l'app, sans permission de stockage, supprimés avec leur sortie",
+        ],
+      },
+      {
+        title: "Sorties",
+        items: [
+          "Liste de toutes les sorties, avec le total parcouru et les chiffres clés de chacune",
+          "Tracé coloré selon la vitesse, avec légende, départ et arrivée",
+          "Distance, durée, vitesse max, moyenne, inclinaison max à gauche et à droite, temps en mouvement, dénivelé positif",
+          "Profils de vitesse et d'inclinaison, avec le pic annoté",
+          "Renommer ou supprimer une sortie",
+        ],
+      },
+      {
+        title: "Replay",
+        items: [
+          "La vidéo avec la télémétrie exacte de chaque image",
+          "Mini-carte réelle qui suit la moto, disponible hors ligne",
+          "Les segments recousus en une seule lecture, calés sur l'heure réelle",
+          "Barre de défilement et vitesse de lecture",
+          "Rotation séparée de l'image et du panneau, par quarts de tour",
+          "Nom du lieu traversé, cherché seulement pendant le replay, jamais en roulant",
+        ],
+      },
+      {
+        title: "Export vidéo",
+        items: [
+          "Un seul MP4 avec la télémétrie incrustée, lisible partout",
+          "Éditeur : glissez, agrandissez, réduisez ou retirez chaque élément, et vérifiez-le à n'importe quel moment de la sortie",
+          "Huit éléments : vitesse, inclinaison, carte, distance, temps, vitesse max, altitude, titre et date",
+          "La carte se retire d'un geste, et votre mise en page est mémorisée",
+          "Taille d'origine, 1080p ou 720p, avec ou sans le son",
+          "Partager vers une autre app, ou copier dans la galerie (Android 10 et plus)",
+        ],
+      },
+      {
+        title: "Réglages",
+        items: [
+          "Quatre palettes : orange, cramoisi, bleu course, jaune haute visibilité",
+          "Mode clair, sombre, ou celui du téléphone",
+          "Fond de carte et téléchargements hors ligne",
+          "Qualité vidéo et son",
+          "Français ou anglais, jusque dans la notification et les vidéos exportées",
+          "Conditions, politique de confidentialité et version de l'app",
+        ],
+      },
+      {
+        title: "Premier lancement",
+        items: [
+          "Conditions d'utilisation présentées avant tout, en français et en anglais",
+          "Installation guidée en cinq étapes : l'app, la localisation et pourquoi, le fond de carte, le hors ligne, la première zone",
+          "La première zone est vérifiée vraiment hors ligne avant de commencer",
+          "« Pas maintenant » si vous n'avez pas de connexion",
+          "Les mises à jour s'installent par-dessus, sans perdre vos sorties",
+        ],
+      },
+    ],
+  },
   faq: {
     heading: "Questions fréquentes",
     items: [
@@ -210,6 +325,10 @@ const fr = {
       {
         q: "Que se passe-t-il si mon téléphone s'éteint en route ?",
         a: "La sortie est sauvegardée en continu. Au prochain lancement, elle est récupérée avec ses statistiques et ses segments vidéo ; au pire, vous perdez la dernière minute filmée.",
+      },
+      {
+        q: "Puis-je éteindre l'écran pendant une sortie ?",
+        a: "Oui. L'écran reste allumé tant que l'app est ouverte, pratique sur un support, mais vous pouvez verrouiller le téléphone ou le ranger dans une poche : position, statistiques et vidéo continuent de s'enregistrer, signalées par une notification. Seul l'armement de la vidéo se fait app ouverte.",
       },
       {
         q: "MotoMap fait-il du guidage GPS ?",

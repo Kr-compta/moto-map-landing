@@ -52,6 +52,14 @@ export const Battery = (p: IconProps) => (
   </Icon>
 );
 
+/** A dark phone still recording: the screen-off pillar. */
+export const PhoneRec = (p: IconProps) => (
+  <Icon {...p}>
+    <rect x="6" y="2.5" width="12" height="19" rx="2.5" />
+    <circle cx="12" cy="12" r="2.2" fill="currentColor" />
+  </Icon>
+);
+
 export const Camera = (p: IconProps) => (
   <Icon {...p}>
     <rect x="2" y="6" width="14" height="12" rx="2.5" />

@@ -37,16 +37,20 @@ const en: Dictionary = {
     primaryCta: "Download the APK",
     secondaryCta: "See the features",
     status: "Android APK · 4.5 MB · in English and French",
-    trust: ["No account", "Maps without signal", "Android 5.0 and up"],
+    trust: ["No account", "Maps without signal", "Records with the screen off", "Android 5.0 and up"],
   },
   pillars: {
     heading: "Built for the road, not the cloud",
     intro:
-      "Three promises that hold at the bottom of a valley, abroad, or on 2% battery.",
+      "Four promises that hold at the bottom of a valley, abroad, or on 2% battery.",
     items: [
       {
         title: "Works with no signal",
         body: "The map caches as you ride, and you can download a region in advance. No signal? Nothing changes.",
+      },
+      {
+        title: "Records with the screen off",
+        body: "Lock the phone or let the screen go dark in the cradle: the ride keeps recording, video included. A notification shows it's still running.",
       },
       {
         title: "Your rides stay yours",
@@ -185,6 +189,117 @@ const en: Dictionary = {
     styleNote:
       "Area download works with the OpenTopoMap and HikeBikeMap styles. The standard OpenStreetMap style can't be pre-downloaded (OSM tile usage policy), but it still caches normally as you ride.",
   },
+  allFeatures: {
+    eyebrow: "Full inventory",
+    heading: "Everything MotoMap does",
+    intro: "Every feature in the current version, screen by screen.",
+    groups: [
+      {
+        title: "Map",
+        items: [
+          "Three map styles: OpenStreetMap, OpenTopoMap and HikeBikeMap",
+          "Position and heading, a rotating marker, the live track of the ride",
+          "Four controls only: re-centre, strict offline, arm video, video settings",
+          "GPS status (off, searching, locked): one tap opens the phone's settings",
+          "While riding: speed, lean, distance, duration and average, with RECORDING or PAUSED spelled out",
+          "Camera monitor with a REC timer, enlarged with a tap",
+        ],
+      },
+      {
+        title: "Offline",
+        items: [
+          "Every tile drawn is kept on the phone, with no expiry",
+          "Area download: frame a region, pick a detail level (up to 25,000 tiles)",
+          "Each style says whether it can be downloaded; for OpenStreetMap, which can't, the app offers OpenTopoMap or HikeBikeMap",
+          "Strict offline mode: no roaming data used",
+        ],
+      },
+      {
+        title: "Speedometer",
+        items: [
+          "Full-screen analogue speedometer",
+          "Lean gauge with left and right peaks held",
+          "Lean zeroing for your mount, one zero for portrait and one for landscape",
+          "Distance, time, top speed and moving average",
+          "Heading and altitude",
+        ],
+      },
+      {
+        title: "Recording",
+        items: [
+          "Keeps going with the screen off or the phone locked, shown by an ongoing ride notification",
+          "Saved continuously every five seconds, not just at the end",
+          "A ride cut short is recovered and marked \"recovered\"; a clean stop when the battery runs critical",
+          "An accidental start (fewer than three fixes) is dropped, unless it carries video",
+          "Filtered GPS: inaccurate fixes and impossible jumps rejected, Doppler speed, no Google Play Services",
+          "Peak lean only counted above 11 km/h",
+        ],
+      },
+      {
+        title: "Ride video",
+        items: [
+          "Armed from the map, for the whole ride",
+          "Phone in portrait or landscape, front or rear camera, resolution, sound",
+          "Front camera never mirrored; if the chosen lens is missing, the other one takes over and you're told",
+          "One-minute segments: a power cut costs only the segment in progress",
+          "Files private to the app, no storage permission, deleted with their ride",
+        ],
+      },
+      {
+        title: "Trips",
+        items: [
+          "Every ride listed, with the total distance and each ride's key figures",
+          "Route coloured by speed, with a legend, start and finish",
+          "Distance, duration, top speed, average, peak lean left and right, moving time, elevation gain",
+          "Speed and lean profiles, with the peak marked",
+          "Rename or delete a ride",
+        ],
+      },
+      {
+        title: "Replay",
+        items: [
+          "The footage with the exact telemetry of every frame",
+          "A real map inset that follows the bike, available offline",
+          "Segments stitched into one playback, locked to real time",
+          "Scrub bar and playback speed",
+          "Separate quarter-turn rotation for the picture and the panel",
+          "The name of the place you rode through, looked up only during replay, never while riding",
+        ],
+      },
+      {
+        title: "Video export",
+        items: [
+          "A single MP4 with the telemetry burned in, plays anywhere",
+          "Editor: drag, enlarge, shrink or remove each element, and check it at any moment of the ride",
+          "Eight elements: speed, lean, map, distance, ride time, top speed, altitude, title and date",
+          "The map comes off in one tap, and your layout is remembered",
+          "As filmed, 1080p or 720p, with or without sound",
+          "Share to another app, or copy to the gallery (Android 10 and up)",
+        ],
+      },
+      {
+        title: "Settings",
+        items: [
+          "Four palettes: orange, crimson, racing blue, hi-vis yellow",
+          "Light, dark, or follow the phone",
+          "Map style and offline downloads",
+          "Video quality and sound",
+          "English or French, down to the notification and exported videos",
+          "Terms, privacy policy and app version",
+        ],
+      },
+      {
+        title: "First launch",
+        items: [
+          "Terms shown before anything else, in English and French",
+          "Five-step guided setup: the app, location and why, the map style, how offline works, the first area",
+          "The first area is checked to really work offline before you start",
+          "\"Not now\" if you have no connection",
+          "Updates install over the old version, keeping your rides",
+        ],
+      },
+    ],
+  },
   faq: {
     heading: "Frequently asked questions",
     items: [
@@ -211,6 +326,10 @@ const en: Dictionary = {
       {
         q: "What happens if my phone dies mid-ride?",
         a: "The ride is saved continuously. On the next launch it is recovered with its stats and video segments; at worst you lose the last filmed minute.",
+      },
+      {
+        q: "Can I turn the screen off during a ride?",
+        a: "Yes. The screen stays on while the app is open, which suits a cradle, but you can lock the phone or put it in a pocket: position, stats and video keep recording, shown by a notification. Only arming video needs the app open.",
       },
       {
         q: "Does MotoMap do turn-by-turn navigation?",

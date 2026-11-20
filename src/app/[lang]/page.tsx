@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import {
+  AllFeatures,
   BatterySection,
   Faq,
   FinalCta,
@@ -79,6 +80,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         <BatterySection t={t.battery} />
         <Gloves t={t.gloves} />
         <Offline t={t.offline} />
+        <AllFeatures t={t.allFeatures} />
         <Faq t={t.faq} />
         <FinalCta t={t.cta} />
       </main>
